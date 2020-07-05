@@ -57,15 +57,17 @@ public class DefaultContactPublisher implements EntityCollisionListener {
 
     protected Contact createContact( EntityPhysicsObject object1, EntityPhysicsObject object2, PhysicsCollisionEvent event ) {
         float energy = 0; 
-        Vector3f wp = event.getPositionWorldOnB().clone(); 
-        Vector3f normal = event.getNormalWorldOnB().clone();
+        Vector3f wp = new Vector3f();
+        event.getPositionWorldOnB(wp);
+        Vector3f normal = new Vector3f();
+        event.getNormalWorldOnB(normal);
  
         // If object1 is null then we'll swap everything so that we always have a valid
         // object1.  It's just nicer.
         if( object1 == null ) {
             object1 = object2;
             object2 = null;
-            wp.set(event.getPositionWorldOnA());
+            event.getPositionWorldOnA(wp);
             normal.negateLocal();
         }
          
@@ -105,4 +107,3 @@ public class DefaultContactPublisher implements EntityCollisionListener {
         return contactEntity;                
     }
 }
-
