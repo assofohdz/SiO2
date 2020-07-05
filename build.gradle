@@ -23,10 +23,6 @@ ext.jmeVersion = "3.2.1-stable"
 ext {
     releaseDescription = "SiO2 ${project.version}"
     releaseVcsTag = "${project.name}-v${project.version}"
-}
-
-// Project-wide meta-data
-ext {
     bintrayLabels = ['jMonkeyEngine', 'gamedev', 'util']
     websiteUrl = 'https://github.com/Simsilica/SiO2'
     vcsUrl = 'https://github.com/Simsilica/SiO2.git'
