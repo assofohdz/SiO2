@@ -6,8 +6,8 @@ mainClassName='com.simsilica.demo.bullet.Main'
 
 version='1.0.0-SNAPSHOT'
 
-//ext.jmeVersion = "3.2.1-stable" 
-ext.jmeVersion = "3.3.0-SNAPSHOT"
+ext.jmeVersion = "3.2.1-stable" 
+//ext.jmeVersion = "3.3.0-SNAPSHOT"
 
 sourceCompatibility = 1.7
 
