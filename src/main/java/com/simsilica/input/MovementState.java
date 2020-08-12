@@ -91,7 +91,11 @@ public class MovementState extends BaseAppState {
      *  target has been provided.
      */
     public void setMovementTarget( MovementTarget target ) {
+        if( this.target != null ) {
+            this.target.terminate(this);
+        }
         this.target = target;
+        target.initialize(this);
         initializeRotation(target.getRotation());
     }
 

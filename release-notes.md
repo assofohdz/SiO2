@@ -1,4 +1,15 @@
-Version 1.4.0 (unreleased)
+Version 1.5.1 (unreleased)
+--------------
+
+Version 1.5.0 (latest)
+--------------
+* Added an initialize and terminate methods to MovementTarget for the MovementState to
+    call when the target is set.
+* Added an AbstractMovementTarget class to shield subclasses from future interface
+    changes.
+
+
+Version 1.4.0
 --------------
 * Fixed a an issue where EntityContainer.stop() wasn't clearing the internal entity set
     reference causing other issues if operations were performed on the container after
@@ -10,7 +21,7 @@ Version 1.4.0 (unreleased)
     and a default wiring to the standard JME camera. The movement target is configurable.
 
 
-Version 1.3.0 (latest)
+Version 1.3.0
 --------------
 * Upped the Zay-ES-net version to 1.4.0 to get the entity set filtering
     bug fix.
