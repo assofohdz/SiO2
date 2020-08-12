@@ -5,6 +5,8 @@ version='1.0.0-SNAPSHOT'
 
 ext.jmeVersion = "3.2.1-stable" 
 
+sourceCompatibility = 1.7
+
 // Version meta-data
 ext {
     releaseDescription = "SiO2 Bullet ${project.version}"    
